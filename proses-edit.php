@@ -14,9 +14,9 @@
     $query = mysqli_query($db, $sql);
 
     if( $query ) {
-      header('Location: list-siswa.php');
+      header('Location: list-siswa.php?status=sukses');
     } else {
-      die("Gagal menyimpan perubahan...");
+      header('Location: list-siswa.php?status=gagal');
     }
   } else {
     die("Akses dilarang!");

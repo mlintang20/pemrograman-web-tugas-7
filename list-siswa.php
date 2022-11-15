@@ -24,6 +24,18 @@
       </button>
     </nav>
 
+    <?php if(isset($_GET['status'])): ?>
+      <div>
+        <?php 
+          if($_GET['status'] == 'sukses') {
+            echo "<p class='fw-bold fs-3 text-success'>Perubahan berhasil!</p>";
+          } else {
+            echo "<p class='fw-bold fs-3 text-danger'>Perubahan gagal!</p>";
+          }
+          ?>
+      </div>
+    <?php endif; ?>
+
     <table style="border: 1px solid white;">
       <thead>
         <tr>
