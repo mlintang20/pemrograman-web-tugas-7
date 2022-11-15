@@ -53,12 +53,13 @@
         
           $sql = "SELECT * FROM calon_siswa";
           $query = mysqli_query($db, $sql);
+          $count = 1;
 
           while($siswa = mysqli_fetch_array($query)){
             echo "<tr>";
 
-            /*echo "<td>" . <?php for($i=0; $i < 10; $i++) {} ?> . "</td>";*/
-            echo "<td>" . $siswa['id'] . "</td>";
+            echo "<td>" . $count++ . "</td>";
+            // echo "<td>" . $siswa['id'] . "</td>";
             echo "<td>" . $siswa['nama'] . "</td>";
             echo "<td>" . $siswa['alamat'] . "</td>";
             echo "<td>" . $siswa['jenis_kelamin'] . "</td>";
