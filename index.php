@@ -9,30 +9,36 @@
   <!-- CDN Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
-<body class="mx-4">
-  <header>
-    <h1>Pendaftaran Siswa Baru</h1>
-  </header>
+<body class="bg-dark text-light d-flex flex-column align-items-center">
+  <div class="row" style="height: 100vh">
+    <div class="col d-flex flex-column justify-content-center align-items-center mb-5">
 
-  <h3>Menu</h3>
-  <nav>
-    <ul>
-      <li><a href="form-daftar.php" class="text-decoration-none">Daftar Baru</a></li>
-      <li><a href="list-siswa.php" class="text-decoration-none">Pendaftar</a></li>
-    </ul>
-  </nav>
+      <header>
+        <h1>Pendaftaran Siswa Baru</h1>
+      </header>
 
-  <?php if(isset($_GET['status'])): ?>
-    <div>
-      <?php 
-        if($_GET['status'] == 'sukses') {
-          echo "<p class='text-success'>Pendaftaran berhasil!</p>";
-        } else {
-          echo "<p class='text-danger'>Pendaftaran gagal!</p>";
-        }
-        ?>
+      <h3 class="mb-4">Menu</h3>
+      <nav class="d-flex justify-content-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary"><a href="form-daftar.php" class="text-light text-decoration-none">Daftar Baru</a></button>
+          <button type="button" class="btn btn-primary"><a href="list-siswa.php" class="text-light text-decoration-none">Pendaftar</a></button>
+        </div>
+      </nav>
+
+      <?php if(isset($_GET['status'])): ?>
+        <div>
+          <?php 
+            if($_GET['status'] == 'sukses') {
+              echo "<p class='fw-bold fs-3 text-success'>Pendaftaran berhasil!</p>";
+            } else {
+              echo "<p class='fw-bold fs-3 text-danger'>Pendaftaran gagal!</p>";
+            }
+            ?>
+        </div>
+      <?php endif; ?>
+
     </div>
-  <?php endif; ?>
+  </div>
 
   <!-- cdn Bootstrap js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">

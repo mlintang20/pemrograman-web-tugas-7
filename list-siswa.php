@@ -11,7 +11,7 @@
   <!-- CDN Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-dark text-light">
   <header class="text-center">
     <h1 class="my-3">List Siswa yang Sudah Mendaftar</h1>
   </header>
@@ -24,7 +24,7 @@
       </button>
     </nav>
 
-    <table border="1">
+    <table style="border: 1px solid white;">
       <thead>
         <tr>
           <th>No</th>
@@ -68,6 +68,12 @@
     </table>
 
     <h5 class="fw-bold mt-3">Total jumlah siswa: <?= mysqli_num_rows($query); ?> siswa</h5>
+
+    <div>
+      <button type="button" class="btn btn-info my-2">
+        <a href="index.php" class="text-dark text-decoration-none">Kembali Ke Menu Utama</a>
+      </button>
+    </div>
 
   </div>
 
