@@ -68,7 +68,7 @@
             echo "<td>";
             echo "<div class='btn-group' role='group'>";
             echo "<button type='button' class='btn btn-warning'><a href='form-edit.php?id=".$siswa['id']."' class='text-dark text-decoration-none'>Edit</a></button>";
-            echo "<button type='button' class='btn btn-danger'><a href='hapus.php?id=".$siswa['id']."' class='text-light text-decoration-none'>Hapus</a></button>";
+            echo "<button type='button' class='btn btn-danger'><a onClick=\"javascript: return confirm('Hapus data ini?');\" href='hapus.php?id=".$siswa['id']."' class='text-light text-decoration-none'>Hapus</a></button>";
             echo "</div>";
             echo "</td>";
 
